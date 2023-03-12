@@ -45,7 +45,7 @@ export default function TVShows() {
                                     </figure>
 
                                 </div>
-                                <Link to= {{pathname: `/tvshow/${tvshow.ShowID}`}}>
+                                <Link to= {{pathname: `/items/${tvshow.ShowID}`}}>
                                     <button className="button is-link is-centre">Watch Now</button>
                                 </Link>
                             </div>

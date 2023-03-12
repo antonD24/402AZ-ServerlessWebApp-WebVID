@@ -1,11 +1,12 @@
 import http from "../http-common";
 import Itv from "../components/types/TVtypes"; 
 import {Auth} from "aws-amplify";
+import { useState } from "react";
 
 const getAll = async () => {
     // returns array of all TV Shows
     const user = await Auth.currentSession();
-    return http.get<Array<Itv>>("/TVShows", {
+    return http.get<Array<Itv>>("/items", {
         headers:{
             Authorization: user.getIdToken().getJwtToken().toString()
         }
@@ -14,9 +15,9 @@ const getAll = async () => {
 
 //returning just one show
 
-    const get = async(ShowID: string)=>{
+    const get = async(id: any)=>{
     const user = await Auth.currentSession();
-    return http.get<Itv>(`/TVShows/${ShowID}`, {
+    return http.get<Itv>(`/items/${id}`, {
         headers:{
             Authorization: user.getIdToken().getJwtToken().toString()
         }
@@ -24,9 +25,9 @@ const getAll = async () => {
 };
 
 //deleting show
-const remove = async(ShowID: string) => {
+const remove = async(id: any) => {
     const user = await Auth.currentSession();
-    return http.delete<any>(`/TVShows/${ShowID}`,{
+    return http.delete<any>(`/items/${id}`,{
         headers:{
             Authorization: user.getIdToken().getJwtToken().toString()
         }
@@ -35,12 +36,19 @@ const remove = async(ShowID: string) => {
 
 const put = async (data : Itv)=> {
     const user = await Auth.currentSession();
-    return http.put<any>("/TVtypes,", data, {
+    const response = await window.fetch('https://9o0nimges3.execute-api.us-east-1.amazonaws.com/items',{
+        method: 'PUT',
         headers:{
-            Authorization: user.getIdToken().getJwtToken().toString()
-        }
+            'Authorization:' : user.getIdToken().getJwtToken().toString()
+    },
+    body: JSON.stringify(data)
     });
-};
+
+    return response;
+        
+        
+    
+}
 
 const ShowsServices = {
     getAll,
