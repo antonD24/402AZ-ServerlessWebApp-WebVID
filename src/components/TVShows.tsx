@@ -26,42 +26,43 @@ export default function TVShows() {
 
   return (
     <div className="container has-text-centered">
-        <div className="">
-          <h1 className="title"> </h1>
-          <h1 className="title is-1">TV Shows</h1>
-          <h2 className=""></h2>
-          </div>
-          <div className="section">
-            <div className="columns is-multiline">
-                {
-                    TVShows.map((tvshow, index) => (
-                        <div className="column is-one-third has-background-backgrounddark">
-                            <div className="card is-bacground">
-                                <div className="card-image">
-                                    <figure className="image is-4by3">
-                                        <img src = "https://m.media-amazon.com/images/I/A16HuooO3IL._AC_SL1500_.jpg"></img>
+      <div className="">
+        <h1 className="title"> </h1>
+        <h1 className="title is-1">TV Shows</h1>
+        <h2 className=""></h2>
+        <div><MyApp></MyApp></div>
+      </div>
+      <div className="section">
+        <div className="columns is-multiline">
+          {
+            TVShows.map((tvshow, index) => (
+              <div className="column is-one-third has-background-backgrounddark">
+                <div className="card is-bacground">
+                  <div className="card-image">
+                    <figure className="image is-4by3">
+                      <img src="https://m.media-amazon.com/images/I/A16HuooO3IL._AC_SL1500_.jpg"></img>
 
 
-                                    </figure>
+                    </figure>
 
-                                </div>
-                                <Link to= {{pathname: `/items/${tvshow.ShowID}`}}>
-                                    <button className="button is-link is-centre">Watch Now</button>
-                                </Link>
-                            </div>
-                        </div>
-                    ))
-                }
-            </div>
-          </div>
-          </div>
+                  </div>
+                  <Link to={{ pathname: `/items/${tvshow.id}` }}>
+                    <button className="button is-link is-centre">Watch Now</button>
+                  </Link>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
 
 
 
-      
-      
-      
-    
-    
+
+
+
+
+
   )
 }
