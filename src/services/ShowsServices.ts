@@ -1,5 +1,5 @@
 import http from "../http-common";
-import Itv from "../components/types/TVtypes";
+import Itv from "../components/types/TVShows";
 import { Auth } from "aws-amplify";
 import { useState } from "react";
 
@@ -54,7 +54,7 @@ const ShowsServices = {
   getAll,
   get,
   remove,
-  put,
+  put
 };
 
 export default ShowsServices;

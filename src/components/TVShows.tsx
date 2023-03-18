@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Itv from "./types/TVtypes";
+import Itv from "./types/TVShows";
 import MyApp from "./Carousel/Capp";
 import ShowsServices from "../services/ShowsServices";
 import tvshow from "./tvshow";
+
 
 export default function TVShows() {
   const [TVShows, setTVShow] = useState<Array<Itv>>([]);
@@ -25,36 +26,91 @@ export default function TVShows() {
   }, []);
 
   return (
-    <div className="container has-text-centered">
-      <div className="">
-        <h1 className="title"> </h1>
-        <h1 className="title is-1">TV Shows</h1>
-        <h2 className=""></h2>
-        <div><MyApp></MyApp></div>
-      </div>
-      <div className="section">
-        <div className="columns is-multiline">
-          {
-            TVShows.map((tvshow, index) => (
-              <div className="column is-one-third has-background-backgrounddark">
-                <div className="card is-bacground">
+    <div className="container is-fluid">
+      <section className="hero-body-is-large">
+
+        <div className="hero-body">
+          <MyApp></MyApp>
+        </div>
+        <div className="container has-text-centered">
+          <p className="title">
+            TV Shows
+          </p>
+          <p>
+
+          </p>
+        </div>
+      </section>
+
+      <section>
+        {
+          TVShows.map((TVShows, index) => (
+
+
+
+
+
+            <div className="columns">
+
+
+
+              <div className="column">
+                <div className="card">
+
+
                   <div className="card-image">
-                    <figure className="image is-4by3">
-                      <img src="https://m.media-amazon.com/images/I/A16HuooO3IL._AC_SL1500_.jpg"></img>
+                    <figure className="image">
+
+                      
+                      <img>src= {TVShows.Image}</img>
+
 
 
                     </figure>
 
                   </div>
-                  <Link to={{ pathname: `/items/${tvshow.id}` }}>
-                    <button className="button is-link is-centre">Watch Now</button>
-                  </Link>
+
+
+                  <div className="card">
+                    <div className="card-content">
+                      <div className="content">
+                        <div>
+                            <p>{TVShows.ShowName}</p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card">
+                    <footer className="card-footer">
+                      <a href="#" className="card-footer-item">Save</a>
+
+                    </footer>
+                  </div>
                 </div>
+
+
+
               </div>
-            ))
-          }
-        </div>
-      </div>
+
+              <div className="column">
+
+              </div>
+              <div className="column">
+
+              </div>
+              <div className="column">
+
+              </div>
+            </div>
+
+          ))
+        }
+
+      </section>
+
+
+
     </div>
 
 

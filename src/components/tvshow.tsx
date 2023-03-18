@@ -2,7 +2,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Itv from "./types/TVtypes";
+import Itv from "./types/TVShows";
 import ShowsServices from "../services/ShowsServices";
 import { stringify } from "querystring";
 
