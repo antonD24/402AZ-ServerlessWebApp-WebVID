@@ -9,6 +9,7 @@ import Home from './components/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import TVShows from './components/TVShows';
 import Movies from './components/Movies';
+import tvshow from './components/tvshow';
 
 
 

@@ -78,6 +78,31 @@ export default function ShowAdmin() {
         
     }
 
+    useEffect(() => {
+        getTVShows();
+    }, [])
+
+    return(
+        <div className="container">
+            <section className="">
+                <h1 className="title is-1 is light">View Show</h1>
+                <h2 className=""></h2>
+            </section>
+
+            <section className="section">
+                <div className="card">
+                    <form>
+                        <h1><strong>Add or update a show</strong></h1>
+                        <p>TV Show ID</p>
+                        <input className="input is-rounded" type="text" name="id" placeholder="Show ID" value={tvshow.id} onChange={handleChange}
+                        
+
+                    </form>
+                </div>
+            </section>
+        </div>
+    )
+
     
 
 

@@ -27,18 +27,20 @@ export default function TVShows() {
   }, []);
 
   return (
-
-    <div className="container has-text-centered">
+    <div className="has-background-black">
+      <MyApp></MyApp>
+      <div className="container has-text-centered has-background-dark">
       <div className="">
         <h1 className="title is-1">TV Shows</h1>
         <h2 className=""></h2>
-        <MyApp></MyApp>
+        
       </div>
-      <div className="section">
+      
+      <div className="section has-background-gray">
         <div className="columns is-multiline">
           {
             TVShows.map((tvshow, index) => (
-              <div className="column is-one-third">
+              <div className="column is-one-third has-background-backgrounddark">
 
 
 
@@ -67,7 +69,7 @@ export default function TVShows() {
         </div>
       </div>
     </div>
-
+    </div>
 
 
 

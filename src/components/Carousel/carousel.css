@@ -38,8 +38,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     border-radius: 0.5rem;
     cursor: pointer;
 }
@@ -79,20 +79,20 @@
 }
 
 .inner:hover .image {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .image-normal {
-    height: 30rem
+    height: 40rem
 }
 
 .image-large {
     height: 40rem
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
     .image-large {
-        height: 800px;
+        height: 650px;
     }
 }
 
