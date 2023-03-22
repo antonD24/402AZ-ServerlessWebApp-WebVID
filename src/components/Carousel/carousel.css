@@ -79,20 +79,20 @@
 }
 
 .inner:hover .image {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .image-normal {
-    height: 40rem
+    height: 30rem
 }
 
 .image-large {
     height: 40rem
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     .image-large {
-        height: 650px;
+        height: 800px;
     }
 }
 

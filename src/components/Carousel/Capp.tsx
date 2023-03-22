@@ -5,28 +5,28 @@ const MyApp = () => {
 const CarouselData = [
   {
     headerText: null,
-    subText: 'Sub Text One',
-    image: 'https://picsum.photos/300/300',
-  },
-  {
-    headerText: 'Header Text Two',
-    subText: null,
-    image: 'https://picsum.photos/1200/800',
+    subText: 'Arrow',
+    image: 'https://flxt.tmsimg.com/assets/p9263605_ce_h10_aa.jpg',
   },
   {
     headerText: null,
-    subText: null,
-    image: 'https://picsum.photos/720/720',
+    subText: 'Snowpiercer',
+    image: 'https://flxt.tmsimg.com/assets/p16954802_b_h10_aa.jpg',
   },
   {
-    headerText: 'Header Text Four',
-    subText: 'Sub Text Four',
-    image: 'https://picsum.photos/1920/1080',
+    headerText: null,
+    subText: 'FRIENDS',
+    image: 'https://www.scarletthinking.com/wp-content/uploads/2016/10/friends-tv-show-wallpapers-1280x1024.jpg',
   },
   {
-    headerText: 'Header Text Five',
-    subText: 'Sub Text Five',
-    image: 'https://picsum.photos/480/360',
+    headerText: null,
+    subText: 'Euphoria',
+    image: 'https://cdn.wallpapersafari.com/16/93/f57Ck1.jpg',
+  },
+  {
+    headerText: null,
+    subText: 'Agents of S.H.I.E.L.D',
+    image: 'https://images5.alphacoders.com/468/468535.jpg',
   },
 ]
   return    <Carousel

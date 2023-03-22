@@ -1,5 +1,5 @@
 import http from "../http-common";
-import Itv from "../components/types/TVShows";
+import Itv from "../components/types/TVtypes";
 import { Auth } from "aws-amplify";
 import { useState } from "react";
 
