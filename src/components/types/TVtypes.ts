@@ -1,4 +1,5 @@
 import ICast from "./Actors";
+import Seasons from "./Seasons";
 
 
 let TVtypes: Array<Itv>;
@@ -15,6 +16,13 @@ export default interface Itv{
     Plot: string,
     ProducedBy: string,
     ReleaseDate: any,
+    Season1 : Seasons[],
+    Season2 : Seasons[],
+    Season3 : Seasons[],
+    Season4 : Seasons[],
+    Season5 : Seasons[],
+    Season6 : Seasons[],
+    Season7 : Seasons[],
     ShowName: string
 
 

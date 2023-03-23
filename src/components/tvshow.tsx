@@ -24,6 +24,13 @@ export default function tvshow() {
         Plot: "",
         ProducedBy: "",
         ReleaseDate: "",
+        Season1: [],
+        Season2: [],
+        Season3: [],
+        Season4: [],
+        Season5: [],
+        Season6: [],
+        Season7: [],
         ShowName: ""
 
     });

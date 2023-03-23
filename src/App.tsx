@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import TVShows from './components/TVShows';
 import Movies from './components/Movies';
 import tvshow from './components/tvshow';
+import ShowAdmin from './components/ShowAdmin';
 
 
 
@@ -49,7 +50,7 @@ function App() {
     <Authenticator loginMechanisms={['email']} signUpAttributes={['name', 'phone_number',]} components = {components}>
       
       <Router>
-
+        
 
 
         <NavBar />
@@ -58,8 +59,9 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/TVShows' element={<TVShows />} />
           <Route path='/Movies' element={<Movies />} />
-
+          
         </Routes>
+        <ShowAdmin></ShowAdmin>
 
         <Footer />
       </Router>
