@@ -47,8 +47,11 @@ const components = {
 
 function App() {
   return (
+    
     <Authenticator loginMechanisms={['email']} signUpAttributes={['name', 'phone_number',]} components = {components}>
       
+      <Route><ShowAdmin></ShowAdmin></Route>
+
       <Router>
         
 
@@ -61,11 +64,13 @@ function App() {
           <Route path='/Movies' element={<Movies />} />
           
         </Routes>
-        <ShowAdmin></ShowAdmin>
+        
 
         <Footer />
+        
       </Router>
     </Authenticator>
+    
 
 
   );

@@ -115,7 +115,7 @@ export default function ShowAdmin() {
                             <input className="input is-rounded" type="text" name="Plot" placeholder="Plot" value={tvshow.Plot} onChange={handleChange} />
 
                             <p>Season 1</p>
-                            <textarea className="textarea is-rounded" itemType="text" name="Season1" placeholder="Season 1" value={tvshow.Season1} onChange={handleChange} />
+                            <textarea className="textarea is-rounded" itemType="text" name="Season1" placeholder="Season 1" value={tvshow.Season1.join(", ")} onChange={handleChange} />
 
                             <p>Season 2</p>
                             <input className="input is-rounded" type="text" name="Season2" placeholder="Season 2" value={tvshow.Season2.join(", ")} onChange={handleChange} />
