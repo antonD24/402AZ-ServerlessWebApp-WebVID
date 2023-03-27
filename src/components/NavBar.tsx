@@ -4,6 +4,7 @@ import {Auth} from 'aws-amplify';
 
 
 
+
 export default function NavBar(){
     
   
@@ -17,7 +18,7 @@ export default function NavBar(){
   }
   
     return (
-    <nav className="navbar is-black" role="navigation" aria-label="main navigation">
+    <nav className="navbar has-background-success-dark" role="navigation" aria-label="main navigation">
   <div className="navbar-brand">
     <a className="navbar-item" href="https://bulma.io">
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/>
@@ -28,44 +29,35 @@ export default function NavBar(){
 
   <div id="navbarBasicExample" className="navbar-menu">
     <div className="navbar-start">
-      <a className="navbar-item" href='/'>
+      <a className="navbar-item has-text-white has-background-success-dark" href='/'>
         Home
       </a>
 
-      <a className="navbar-item" href='/TVShows'>
+      <a className="navbar-item has-text-white has-background-success-dark" href='/TVShows'>
         TV Shows
       </a>
 
-      <a className="navbar-item" href ='/Movies'>
+      <a className="navbar-item has-text-white has-background-success-dark" href ='/Movies'>
         
           Movies
         </a>
 
-        <div className="navbar-dropdown">
-          <a className="navbar-item">
-            About
-          </a>
-          <a className="navbar-item">
-            Jobs
-          </a>
-          <a className="navbar-item">
-            Contact
+        
+          <a className="navbar-item has-text-white has-background-success-dark">
+            Listings
           </a>
           
-          <a className="navbar-item">
-            Report an issue
-          </a>
-        </div>
+        
       
     </div>
 
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
-          <a className="button is-primary">
-            <strong>Sign up</strong>
+          <a className="button has-background-warning-dark is-warning has-text-white ">
+            <strong>Feedback</strong>
           </a>
-          <a className="button is-light" onClick={() => {logout()}}>
+          <a className="button has-text-white has-background-danger-dark is-danger" onClick={() => {logout()}}>
             Log Out
           </a>
         </div>

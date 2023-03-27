@@ -5,9 +5,10 @@ import { useParams } from "react-router-dom";
 import Itv from "./types/TVtypes";
 import ShowsServices from "../services/ShowsServices";
 import { stringify } from "querystring";
+import TVShows from "./TVShows";
 
 
-export default function tvshow() {
+export default function Tvshow() {
 
     const { id } = useParams();
 
@@ -38,9 +39,9 @@ export default function tvshow() {
     const getTVShow = (id: string) => {
         ShowsServices.get(id)
             .then((response: any) => {
-                setTVShow(response.data.Item);
+                setTVShow(response.data);
                 console.log("test")
-                console.log(response.data.Item);
+                console.log(response.data);
             })
             .catch((e: Error) => {
                 console.log(e);

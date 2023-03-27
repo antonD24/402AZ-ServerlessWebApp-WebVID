@@ -2,7 +2,7 @@ import React, { useEffect, useState, ChangeEvent } from "react";
 import ShowsServices from "../services/ShowsServices";
 import { Link } from "react-router-dom";
 import Itv from "./types/TVtypes";
-import tvshow from "./tvshow";
+import tvshow from "./Tvshow";
 import { ConsoleLogger } from "@aws-amplify/core";
 
 
