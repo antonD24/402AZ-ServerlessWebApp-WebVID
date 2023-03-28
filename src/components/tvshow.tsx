@@ -7,6 +7,8 @@ import ShowsServices from "../services/ShowsServices";
 import { stringify } from "querystring";
 import TVShows from "./TVShows";
 
+import Footer from "./Footer";
+
 
 export default function Tvshow() {
 
@@ -16,7 +18,7 @@ export default function Tvshow() {
         id: "",
         Actors: [],
         AgeRating: "",
-        DirecredBy: "",
+        DirectedBy: [],
         Language: "",
         Network: "",
         NrOfSeasons: "",
@@ -25,13 +27,17 @@ export default function Tvshow() {
         Plot: "",
         ProducedBy: "",
         ReleaseDate: "",
-        Season1: [],
-        Season2: [],
-        Season3: [],
-        Season4: [],
-        Season5: [],
-        Season6: [],
-        Season7: [],
+        Season1: "",
+        Season2: "",
+        Season3: "",
+        Season4: "",
+        Season5: "",
+        Season6: "",
+        Season7: "",
+        Season8: "",
+        Season9: "",
+        Season10: "",
+        Season11: "",
         ShowName: ""
 
     });
@@ -55,32 +61,200 @@ export default function Tvshow() {
         }
     }, [id])
 
+
+    //tabs
+    const tabs = document.querySelectorAll('.tabs li');
+    const tabContentBoxes = document.querySelectorAll('#tab-content > div');
+
+    tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(item => item.classList.remove('is-active'))
+            tab.classList.add('is-active');
+
+            const target = (tab as HTMLElement).dataset.target;
+            tabContentBoxes.forEach(box => {
+                if (box.getAttribute('id') === target) {
+                    box.classList.remove('is-hidden');
+
+                } else {
+                    box.classList.add('is-hidden');
+                }
+
+            })
+        })
+    })
+
+
     return (
-        <div className="card has-background-black">
-            <div className="card-image">
-                <figure className="image is-96x96">
-                    <img src={tvshow.Image} alt="Placeholder image" />
-                </figure>
-            </div>
-            <div className="card-content has-text-black">
-                <div className="content has-text-black">
-                    <p className=" "></p>
-                    <p className="title is-4 has-text-black"><strong>{tvshow.ShowName}</strong></p>
 
-                    <p className="card-item"><strong>Age Rating:</strong>{tvshow.AgeRating}</p>
-                    <p className="card-item"><strong>Directed by:</strong>{tvshow.DirecredBy}</p>
-                    <p className="card-item"><strong>Language:</strong>{tvshow.Language}</p>
-                    <p className="card-item"><strong>No of Seasons:</strong>{tvshow.NrOfSeasons}</p>
-                    <p className="card-item"><strong>Episode Duration:</strong>{tvshow.EpisodeDuration}</p>
-                    <p className="card-item"><strong>Plot:</strong>{tvshow.Plot}</p>
-                    <p className="card-item"><strong>Produced by:</strong>{tvshow.ProducedBy}</p>
-                    <p className="card-item"><strong>Release Date:</strong>{tvshow.ReleaseDate}</p>
+        <div className="has-background-black">
 
+
+            <div className="container has-background-dark">
+                <h1 className="title is-1"></h1>
+                <h1 className="title is-1"></h1>
+                <div className="">
+
+                    <h1 className="title is-1 has-text-white"><strong>{tvshow.ShowName}</strong></h1>
 
 
                 </div>
+
+                <div className="section has-background-gray">
+
+                    <div className="columns is-multiline">
+
+                        <div className="column is-half">
+
+                            <figure className="image">
+                                <img src={tvshow.Image} />
+                            </figure>
+
+                            <div className="">
+                                <h1 className="title-is-1"></h1>
+                                <div className="box has-background-black">
+                                    <div className=" is-size-3 has-text-white">Trailer</div>
+
+                                </div>
+                            </div>
+                            <h1 className="has-text-dark">a</h1>
+                            <div className="box has-background-black">
+                                <iframe width="560" height="315" src={"https://www.youtube.com/embed/" + id} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
+
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+
+
+                        <div className="column is-half">
+
+                            <div className="content has-text-white">
+                                <div className="box has-background-black has-text-white">
+                                    <p className="is-size-4">Age Rating: <p className="is-size-5">{tvshow.AgeRating}</p></p>
+                                </div>
+                                <div className="box has-background-black has-text-white">
+                                    <p>Release Date: {tvshow.ReleaseDate}</p>
+                                </div>
+                                <div className="box has-background-black has-text-white">
+                                    <p>Plot: {tvshow.Plot}</p>
+                                </div>
+                                <div className="box has-background-black has-text-white">
+                                    <p>Actors: {tvshow.Actors.join(", ")}</p>
+                                </div>
+                                <div className="box has-background-black has-text-white">
+                                    <p>Number of Seasons: {tvshow.NrOfSeasons}</p>
+                                </div>
+                                <div className="box has-background-black has-text-white">
+                                    <p>Episode Duration: {tvshow.EpisodeDuration}</p>
+                                </div>
+                                <div className="box has-background-black has-text-white">
+                                    <p>Language: {tvshow.Language}</p>
+                                </div>
+                                <div className="box has-background-black has-text-white">
+                                    <p>Directed By: {tvshow.DirectedBy.join(", ")}</p>
+                                </div>
+                                <div className="box has-background-black has-text-white">
+                                    <p>Produced By: {tvshow.ProducedBy}</p>
+                                </div>
+                                <div className="box has-background-black has-text-white">
+                                    <p>Network: {tvshow.Network}</p>
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <div className="section has-background-gray">
+                    <div className="tabs is-medium is-centered has-background-black">
+                        <ul>
+                            <li className="is-active" data-target="Season-1">
+                                <a>
+
+                                    <span className="has-text-white">Season 1</span>
+                                </a>
+
+                            </li>
+
+                            <li data-target="Season-2">
+                                <a>
+
+                                    <span className="has-text-white">Season 2</span>
+                                </a>
+                            </li>
+                            <li data-target="Season-3">
+                                <a>
+
+                                    <span className="has-text-white">Season 3</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div className="px-2" id="tab-content">
+                        <div id="Season-1">
+                            <h3 className="is-size-5 title">Season 1</h3>
+
+
+                            <a className="box has-background-black">
+
+                                <iframe width="960" height="540" src={`https://www.youtube.com/embed/${tvshow.Season1}`}
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"></iframe>
+
+                            </a>
+
+
+                        </div>
+                        <div id="Season-2" className="is-hidden">
+                            <h3 className="is-size-5 title">Season 2</h3>
+
+                            <a className="box has-background-black">
+
+                                <iframe width="960" height="540" src={`https://www.youtube.com/embed/${tvshow.Season2}`}
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"></iframe>
+
+                            </a>
+
+                        </div>
+
+                        <div id="Season-3" className="is-hidden">
+                            <h3 className="is-size-5 title">Season 3</h3>
+
+                            <a className="box has-background-black">
+
+                                <iframe width="960" height="540" src={`https://www.youtube.com/embed/${tvshow.Season3}`}
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"></iframe>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
             </div>
-        </div>
+
+        </div >
 
     )
 

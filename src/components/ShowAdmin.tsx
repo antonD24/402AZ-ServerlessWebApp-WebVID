@@ -14,7 +14,7 @@ export default function ShowAdmin() {
         id: "",
         Actors: [],
         AgeRating: "",
-        DirecredBy: "",
+        DirectedBy: [],
         Language: "",
         Network: "",
         NrOfSeasons: "",
@@ -23,13 +23,17 @@ export default function ShowAdmin() {
         Plot: "",
         ProducedBy: "",
         ReleaseDate: "",
-        Season1: [],
-        Season2: [],
-        Season3: [],
-        Season4: [],
-        Season5: [],
-        Season6: [],
-        Season7: [],
+        Season1: "",
+        Season2: "",
+        Season3: "",
+        Season4: "",
+        Season5: "",
+        Season6: "",
+        Season7: "",
+        Season8: "",
+        Season9: "",
+        Season10: "",
+        Season11: "",
         ShowName: ""
     });
 
@@ -115,25 +119,34 @@ export default function ShowAdmin() {
                             <input className="input is-rounded" type="text" name="Plot" placeholder="Plot" value={tvshow.Plot} onChange={handleChange} />
 
                             <p>Season 1</p>
-                            <textarea className="textarea is-rounded" itemType="text" name="Season1" placeholder="Season 1" value={tvshow.Season1.join(", ")} onChange={handleChange} />
+                            <textarea className="textarea is-rounded" itemType="text" name="Season1" placeholder="Season 1" value={tvshow.Season1} onChange={handleChange} />
 
                             <p>Season 2</p>
-                            <input className="input is-rounded" type="text" name="Season2" placeholder="Season 2" value={tvshow.Season2.join(", ")} onChange={handleChange} />
+                            <input className="input is-rounded" type="text" name="Season2" placeholder="Season 2" value={tvshow.Season2} onChange={handleChange} />
 
                             <p>Season 3</p>
-                            <input className="input is-rounded" type="text" name="Season3" placeholder="Season 3" value={tvshow.Season3.join(", ")} onChange={handleChange} />
+                            <input className="input is-rounded" type="text" name="Season3" placeholder="Season 3" value={tvshow.Season3} onChange={handleChange} />
 
                             <p>Season 4</p>
-                            <input className="input is-rounded" type="text" name="Season4" placeholder="Season 4" value={tvshow.Season4.join(", ")} onChange={handleChange} />
+                            <input className="input is-rounded" type="text" name="Season4" placeholder="Season 4" value={tvshow.Season4} onChange={handleChange} />
 
                             <p>Season 5</p>
-                            <input className="input is-rounded" type="text" name="Season5" placeholder="Season 5" value={tvshow.Season5.join(", ")} onChange={handleChange} />
+                            <input className="input is-rounded" type="text" name="Season5" placeholder="Season 5" value={tvshow.Season5} onChange={handleChange} />
 
                             <p>Season 6</p>
-                            <input className="input is-rounded" type="text" name="Season6" placeholder="Season 6" value={tvshow.Season6.join(", ")} onChange={handleChange} />
+                            <input className="input is-rounded" type="text" name="Season6" placeholder="Season 6" value={tvshow.Season6} onChange={handleChange} />
 
                             <p>Season 7</p>
-                            <input className="input is-rounded" type="text" name="Season7" placeholder="Season 7" value={tvshow.Season7.join(", ")} onChange={handleChange} />
+                            <input className="input is-rounded" type="text" name="Season8" placeholder="Season 8" value={tvshow.Season8} onChange={handleChange} />
+                            <p>Season 8</p>
+                            <input className="input is-rounded" type="text" name="Season9" placeholder="Season 9" value={tvshow.Season9} onChange={handleChange} />
+                            <p>Season 9</p>
+                            <input className="input is-rounded" type="text" name="Season10" placeholder="Season 10" value={tvshow.Season10} onChange={handleChange} />
+                            <p>Season 10</p>
+                            <input className="input is-rounded" type="text" name="Season11" placeholder="Season 11" value={tvshow.Season11} onChange={handleChange} />
+                            <p>Season 11</p>
+                            
+
 
                             <p>Actors</p>
                             <input className="input is-rounded" type="text" name="Actors" placeholder="Actors" value={tvshow.Actors.join(", ")} onChange={handleChange} />
@@ -143,7 +156,7 @@ export default function ShowAdmin() {
                             <input className="input is-rounded" type="text" name="AgeRating" placeholder="Age Rating" value={tvshow.AgeRating} onChange={handleChange} />
 
                             <p>Directed by</p>
-                            <input className="input is-rounded" type="text" name="DirectedBy" placeholder="Directed By" value={tvshow.DirecredBy} onChange={handleChange} />
+                            <input className="input is-rounded" type="text" name="DirectedBy" placeholder="Directed By" value={tvshow.DirectedBy.join(", ")} onChange={handleChange} />
 
                             <p>Episode Duration</p>
                             <input className="input is-rounded" type="text" name="EpisodeDuration" placeholder="Episode Duration" value={tvshow.EpisodeDuration} onChange={handleChange} />

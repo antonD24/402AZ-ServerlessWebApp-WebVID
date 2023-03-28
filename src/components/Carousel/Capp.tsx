@@ -6,27 +6,27 @@ const CarouselData = [
   {
     headerText: null,
     subText: 'Arrow',
-    image: 'https://flxt.tmsimg.com/assets/p9263605_ce_h10_aa.jpg',
+    image: 'https://webvideo-402.s3.amazonaws.com/carousel-web/arrow.jpg',
   },
   {
     headerText: null,
     subText: 'Snowpiercer',
-    image: 'https://flxt.tmsimg.com/assets/p16954802_b_h10_aa.jpg',
+    image: 'https://webvideo-402.s3.amazonaws.com/carousel-web/shield.jpg',
   },
   {
     headerText: null,
     subText: 'FRIENDS',
-    image: 'https://www.scarletthinking.com/wp-content/uploads/2016/10/friends-tv-show-wallpapers-1280x1024.jpg',
+    image: 'https://webvideo-402.s3.amazonaws.com/carousel-web/friends.jpg',
   },
   {
     headerText: null,
     subText: 'Euphoria',
-    image: 'https://cdn.wallpapersafari.com/16/93/f57Ck1.jpg',
+    image: 'https://webvideo-402.s3.amazonaws.com/carousel-web/euphoria.jpg',
   },
   {
     headerText: null,
     subText: 'Agents of S.H.I.E.L.D',
-    image: 'https://images5.alphacoders.com/468/468535.jpg',
+    image: 'https://webvideo-402.s3.amazonaws.com/carousel-web/shield.jpg',
   },
 ]
   return    <Carousel

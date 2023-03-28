@@ -53,24 +53,30 @@ export default function TVShows() {
                         <img src={tvshow.Image} alt="Placeholder image" />
                       </figure>
                     </div>
-                    <div className="card-content">
+                    <div className="card-content has-background-black">
                       <div className="content">
-                        {tvshow.ShowName}
+                        <h1 className="title has-text-white">{tvshow.ShowName}</h1>
+
+
 
                       </div>
                     </div>
 
-                    <footer className="card-footer">
+                    <footer className="card-footer-padding-horizontal has-background-black">
 
 
-                      <a href={tvshow.id} className="card-footer-item">Watch</a>
+
+                      <a href={tvshow.id} className="button has-background-success-dark is-success is-fullwidth is-rounded">Watch</a>
+
+
+                      
 
 
 
 
 
                     </footer>
-
+                    
                   </div>
                 </div>
               ))
