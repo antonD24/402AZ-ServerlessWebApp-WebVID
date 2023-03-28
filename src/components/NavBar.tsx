@@ -18,7 +18,7 @@ export default function NavBar(){
   }
   
     return (
-    <nav className="navbar has-background-success-dark is-fluid" role="navigation" aria-label="main navigation">
+    <nav className="navbar has-background-success-dark" role="navigation" aria-label="main navigation">
   <div className="navbar-brand">
     <a className="navbar-item" href="https://bulma.io">
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/>
