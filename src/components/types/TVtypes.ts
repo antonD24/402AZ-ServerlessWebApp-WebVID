@@ -5,9 +5,9 @@ import ICast from "./Actors";
 let TVtypes: Array<Itv>;
 export default interface Itv{
     id: string,
-    Actors: ICast[],
+    Actors: string,
     AgeRating: string,
-    DirectedBy: ICast[],
+    DirectedBy: string,
     EpisodeDuration: string,
     Image: string,
     Language: string,

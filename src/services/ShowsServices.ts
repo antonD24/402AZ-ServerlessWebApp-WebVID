@@ -41,7 +41,7 @@ const put = async (data: Itv) => {
     {
       method: "PUT",
       headers: {
-        "Authorization:": user.getIdToken().getJwtToken().toString(),
+        Authorization: user.getIdToken().getJwtToken().toString(),
       },
       body: JSON.stringify(data),
     }

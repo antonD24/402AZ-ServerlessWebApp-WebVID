@@ -16,9 +16,9 @@ export default function Tvshow() {
 
     const [tvshow, setTVShow] = useState<Itv>({
         id: "",
-        Actors: [],
+        Actors: "",
         AgeRating: "",
-        DirectedBy: [],
+        DirectedBy: "",
         Language: "",
         Network: "",
         NrOfSeasons: "",
@@ -145,7 +145,7 @@ export default function Tvshow() {
                                     <p>Plot: {tvshow.Plot}</p>
                                 </div>
                                 <div className="box has-background-black has-text-white">
-                                    <p>Actors: {tvshow.Actors.join(", ")}</p>
+                                    <p>Actors: {tvshow.Actors}</p>
                                 </div>
                                 <div className="box has-background-black has-text-white">
                                     <p>Number of Seasons: {tvshow.NrOfSeasons}</p>
@@ -157,7 +157,7 @@ export default function Tvshow() {
                                     <p>Language: {tvshow.Language}</p>
                                 </div>
                                 <div className="box has-background-black has-text-white">
-                                    <p>Directed By: {tvshow.DirectedBy.join(", ")}</p>
+                                    <p>Directed By: {tvshow.DirectedBy}</p>
                                 </div>
                                 <div className="box has-background-black has-text-white">
                                     <p>Produced By: {tvshow.ProducedBy}</p>

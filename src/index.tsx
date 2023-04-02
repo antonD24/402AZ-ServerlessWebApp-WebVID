@@ -13,8 +13,8 @@ Amplify.configure({
   Auth: {
 
     region: "us-east-1",
-    userPoolId: "us-east-1_mL1YKcxdy",
-    userPoolWebClientId: "6sugcqugdlovf5vf7s3j9ggr68",
+    userPoolId: "us-east-1_G5MrZgfom",
+    userPoolWebClientId: "5fgikhdrfo7trmfs0qc19a68tg",
     mandatorySignIn: false
   }
 

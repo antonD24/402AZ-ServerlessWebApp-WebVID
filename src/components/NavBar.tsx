@@ -20,8 +20,8 @@ export default function NavBar(){
     return (
     <nav className="navbar has-background-success-dark" role="navigation" aria-label="main navigation">
   <div className="navbar-brand">
-    <a className="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/>
+    <a className="navbar-image" href="/">
+      <img src="https://webvideo-402.s3.amazonaws.com/Logos/navbarlogo.PNG" width="50" height="20"/>
     </a>
 
     
@@ -43,7 +43,7 @@ export default function NavBar(){
         </a>
 
         
-          <a className="navbar-item has-text-white has-background-success-dark">
+          <a className="navbar-item has-text-white has-background-success-dark" href='/Listings'  >
             Listings
           </a>
           
@@ -54,7 +54,7 @@ export default function NavBar(){
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
-          <a className="button has-background-warning-dark is-warning has-text-white ">
+          <a className="button has-background-warning-dark is-warning has-text-white" href='/Feedback'>
             <strong>Feedback</strong>
           </a>
           <a className="button has-text-white has-background-danger-dark is-danger" onClick={() => {logout()}}>
