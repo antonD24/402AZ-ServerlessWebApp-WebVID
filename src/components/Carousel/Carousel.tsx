@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './carousel.css';
 import { CarouselModel } from './Ctypes';
+
 type Props = {
   data: CarouselModel[];
   autoPlay?: boolean;

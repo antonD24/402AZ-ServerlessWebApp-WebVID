@@ -2,8 +2,8 @@ import React, { useEffect, useState, ChangeEvent } from "react";
 import ShowsServices from "../services/ShowsServices";
 import { Link } from "react-router-dom";
 import Itv from "./types/TVtypes";
-import tvshow from "./Tvshow";
-import { ConsoleLogger } from "@aws-amplify/core";
+
+
 
 
 
@@ -51,7 +51,7 @@ export default function ShowAdmin() {
     };
 
     const handleChange = (event: any) => {
-        setTVShow({ ...tvshow, [event.target.name]: event.target.value});
+        setTVShow({ ...tvshow, [event.target.name]: event.target.value });
         console.log(tvshow)
     };
 
@@ -95,17 +95,17 @@ export default function ShowAdmin() {
 
     return (
         <div className="has-background-success-dark">
-        <div className="container">
-            <section className="">
-                <h1 className="title is-1 is light">View Show</h1>
-                <h2 className=""></h2>
-            </section>
+            <div className="container">
+                <section className="">
+                    <h1 className="title is-1 has-text-white">Manage Shows</h1>
+                    <h2 className=""></h2>
+                </section>
 
-            <section className="box has-background-dark">
-            
+                <section className="box has-background-dark">
+
                     <div className="content">
                         <form>
-                            <h1 ><strong className="has-text-white">Add or update a show</strong></h1>
+                            <h1 className="has-text-centered" ><strong className="has-text-white">Add or update a show</strong></h1>
                             <p className="has-text-white">TV Show ID</p>
                             <input className="input is-rounded" type="text" name="id" placeholder="Show ID" value={tvshow.id} onChange={handleChange} />
 
@@ -147,7 +147,7 @@ export default function ShowAdmin() {
                             <input className="input is-rounded" type="text" name="Season10" placeholder="Season 10" value={tvshow.Season10} onChange={handleChange} />
                             <p className="has-text-white">Season 11</p>
                             <input className="input is-rounded" type="text" name="Season11" placeholder="Season 11" value={tvshow.Season11} onChange={handleChange} />
-                            
+
 
 
                             <p className="has-text-white">Actors</p>
@@ -184,41 +184,55 @@ export default function ShowAdmin() {
 
 
                         </form>
-                        <button className="button is rounded is-success" onClick={() => { saveTVShow() }} > Add or Update Listing </button>
-
+                        <h1 className="title-1"></h1>
+                        <div className="has-text-centered">
+                            <button className="button is-large is-rounded is-info" onClick={() => { saveTVShow() }}> Add or Update Listing </button>
+                        </div>
                     </div>
 
-                
-                <div className="section">
-                <div className="columns is-multiline">
-                    {
-                        TVShows.map((tvshow, index) => (
 
-                            
-                                <div className="column is-one-third has-background-backgrounddark">
+                    <div className="section">
+                        <div className="columns is-multiline">
+                            {
+                                TVShows.map((tvshow, index) => (
 
-                                    <div className="card">
-                                        <div className="card-image">
-                                            <figure className="image">
-                                                <img src={tvshow.Image}></img>
-                                            </figure>
+
+                                    <div className="column is-one-third has-background-backgrounddark">
+
+                                        <div className="card has-background-black">
+                                            <div className="card-image">
+                                                <figure className="image">
+                                                    <img src={tvshow.Image}></img>
+                                                </figure>
+                                            </div>
+                                            <div className="has-text-centered mt-4">
+                                                <h3 className="has-text-white mb-5">ID:  {tvshow.id}</h3>
+                                            </div>
+                                            
+
+                                                <div className="has-text-centered mt-3">
+                                                    <a href={tvshow.id} className="button is-rounded is-dark mb-3">View Show</a>
+                                                    <button className="button is-rounded is-danger mb-3 ml-4" onClick={() => { deleteTVShow(tvshow.id) }}>DELETE</button>
+
+                                                </div>
+
+                                                
+                                                
+                                            
+
                                         </div>
-                                        <Link to={{ pathname: `/tvshow/${tvshow.id}` }}>
-                                            <button className="button is-rounded">View Show</button>
-                                        </Link>
+
+
+
                                     </div>
 
+                                ))
+                            }
+                        </div>
+                    </div>
 
-
-                                </div>
-                            
-                        ))
-                    }
-                </div>
-                </div>
-
-            </section >
-        </div >
+                </section >
+            </div >
         </div>
     )
 

@@ -11,7 +11,7 @@ const CarouselData = [
   {
     headerText: null,
     subText: 'Snowpiercer',
-    image: 'https://webvideo-402.s3.amazonaws.com/carousel-web/shield.jpg',
+    image: 'https://webvideo-402.s3.amazonaws.com/carousel-web/snowpiercer.jpg',
   },
   {
     headerText: null,

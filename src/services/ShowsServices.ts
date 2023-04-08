@@ -39,12 +39,15 @@ const put = async (data: Itv) => {
   const response = await window.fetch(
     "https://9o0nimges3.execute-api.us-east-1.amazonaws.com/items",
     {
-      method: "PUT",
+      method: "POST",
       headers: {
+        
+        "*": user.getIdToken().getJwtToken().toString(),
         "Authorization:": user.getIdToken().getJwtToken().toString(),
+
       },
       body: JSON.stringify(data),
-    }
+    }//
   );
 
   return response;

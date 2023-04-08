@@ -28,11 +28,14 @@ export default function TVShows() {
   }, []);
 
   return (
+    
     <div className="has-background-black">
+      
+      <h1 className="title is-1 has-text-white has-text-centered pt-6">TV Shows</h1>
       <MyApp></MyApp>
       <div className="container has-text-centered has-background-dark">
         <div className="">
-          <h1 className="title is-1">TV Shows</h1>
+          
           <h2 className=""></h2>
 
         </div>

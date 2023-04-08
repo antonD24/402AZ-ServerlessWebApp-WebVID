@@ -1,6 +1,5 @@
-import { Auth } from "aws-amplify";
 import axios from "axios";
-import { useState } from "react";
+
 
 
 export default axios.create({

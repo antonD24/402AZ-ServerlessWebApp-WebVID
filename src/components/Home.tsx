@@ -8,7 +8,7 @@ export default function Home() {
             <div className="container has-background-dark">
                 <h1 className="title is-1"></h1>
                 <h1 className="title is-1"></h1>
-                <div className="">
+                <div className="box has-background-black">
 
                     <h1 className="title is-1 has-text-white">Home</h1>
 
@@ -21,7 +21,7 @@ export default function Home() {
 
                         
                         <div className="column is-half mt-6">
-
+                        <div className="box has-background-black">
                         
                         <p className="has-text-white mt-5">
                         Web Video is an open-source streaming platform providing users with a unified streaming platform where they can enjoy all of their favourite content in one place.
@@ -38,13 +38,15 @@ export default function Home() {
 
 
 
-
+                        </div>
 
 
                         </div>
 
-                        <div className="column is-half">
+                        <div className="column is-half has-text-centered">
+                            <div className="box has-background-black">
                             <img src="https://webvideo-402.s3.amazonaws.com/Logos/fulllogo.PNG"/>
+                            </div>
                         </div>
                     </div>
                 </div>
