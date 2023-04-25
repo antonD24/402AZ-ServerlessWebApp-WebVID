@@ -181,8 +181,8 @@ function App() {
         <NavBar />
 
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/TVShows' element={<TVShows/>} />
+          <Route path='/' element={<Home/>}/>
+          <Route path='/TVShows' element={<TVShows/>}/>
           <Route path='/Movies' element={<Movies/>} />
           <Route path='/Listings' element={<Listings/>} />
           <Route path='/ShowAdmin' element={<ShowAdmin/>}></Route>

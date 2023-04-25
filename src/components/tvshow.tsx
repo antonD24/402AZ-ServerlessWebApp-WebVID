@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Itv from "./types/TVtypes";
 import ShowsServices from "../services/ShowsServices";
-import { stringify } from "querystring";
-import TVShows from "./TVShows";
 
-import Footer from "./Footer";
+
+
+
 
 
 export default function Tvshow() {
@@ -119,7 +119,7 @@ export default function Tvshow() {
                             </div>
                             <h1 className="has-text-dark">a</h1>
                             <div className="box has-background-black">
-                                <iframe width="560" height="315" src={"https://www.youtube.com/embed/" + id} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
+                                <iframe width="560" height="315" src={'https://www.youtube.com/embed/' + id} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
 
                             </div>
 

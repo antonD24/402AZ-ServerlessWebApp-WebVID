@@ -2,6 +2,7 @@ import React, { useEffect, useState, ChangeEvent } from "react";
 import ShowsServices from "../services/ShowsServices";
 import { Link } from "react-router-dom";
 import Itv from "./types/TVtypes";
+import { Auth } from "aws-amplify";
 
 
 
@@ -58,6 +59,7 @@ export default function ShowAdmin() {
     const saveTVShow = () => {
         const savedTVShow = { ...tvshow };
         let id: string = savedTVShow.id;
+        
         savedTVShow.id = id;
         ShowsServices.put(savedTVShow)
             .then((response: any) => {
@@ -108,35 +110,40 @@ export default function ShowAdmin() {
                             <h1 className="has-text-centered" ><strong className="has-text-white">Add or update a show</strong></h1>
                             <p className="has-text-white">TV Show ID</p>
                             <input className="input is-rounded" type="text" name="id" placeholder="Show ID" value={tvshow.id} onChange={handleChange} />
-
-                            <p className="has-text-white">Show Name</p>
-                            <input className="input is-rounded" type="text" name="ShowName" placeholder="TV Show Name" value={tvshow.ShowName} onChange={handleChange} />
-
-                            <p className="has-text-white">Release Date</p>
-                            <input className="input is-rounded" type="text" name="ReleaseDate" placeholder="ReleaseDate" value={tvshow.ReleaseDate} onChange={handleChange} />
-
-
+                            <p className="has-text-white">Actors</p>
+                            <textarea className="textarea is-rounded" name="Actors" placeholder="Actors" value={tvshow.Actors} onChange={handleChange} />
+                            <p className="has-text-white">Age Rating</p>
+                            <input className="input is-rounded" type="text" name="AgeRating" placeholder="Age Rating" value={tvshow.AgeRating} onChange={handleChange} />
+                            <p className="has-text-white">Directed by</p>
+                            <textarea className="textarea is-rounded" name="DirectedBy" placeholder="Directed By" value={tvshow.DirectedBy} onChange={handleChange} />
+                            <p className="has-text-white">Language</p>
+                            <input className="input is-rounded" type="text" name="Language" placeholder="Language" value={tvshow.Language} onChange={handleChange} />
+                            <p className="has-text-white">Network</p>
+                            <input className="input is-rounded" type="text" name="Network" placeholder="Network" value={tvshow.Network} onChange={handleChange} />
+                            <p className="has-text-white">Nr. of Seasons</p>
+                            <input className="input is-rounded" type="text" name="NrOfSeasons" placeholder="Nr. of Seasons" value={tvshow.NrOfSeasons} onChange={handleChange} />
+                            <p className="has-text-white">Episode Duration</p>
+                            <input className="input is-rounded" type="text" name="EpisodeDuration" placeholder="Episode Duration" value={tvshow.EpisodeDuration} onChange={handleChange} />
+                            <p className="has-text-white">Image</p>
+                            <input className="input is-rounded" type="text" name="Image" placeholder="Image" value={tvshow.Image} onChange={handleChange} />
                             <p className="has-text-white">Plot</p>
                             <textarea className="textarea is-rounded" name="Plot" placeholder="Plot" value={tvshow.Plot} onChange={handleChange} />
-
+                            <p className="has-text-white">Produced By</p>
+                            <textarea className="textarea is-rounded" name="ProducedBy" placeholder="Produced By" value={tvshow.ProducedBy} onChange={handleChange} />
+                            <p className="has-text-white">Release Date</p>
+                            <input className="input is-rounded" type="text" name="ReleaseDate" placeholder="ReleaseDate" value={tvshow.ReleaseDate} onChange={handleChange} />
                             <p className="has-text-white">Season 1</p>
-                            <input className="input is-rounded" itemType="text" name="Season1" placeholder="Season 1" value={tvshow.Season1} onChange={handleChange} />
-
+                            <input className="input is-rounded" type="text" name="Season1" placeholder="Season 1" value={tvshow.Season1} onChange={handleChange} />
                             <p className="has-text-white">Season 2</p>
                             <input className="input is-rounded" type="text" name="Season2" placeholder="Season 2" value={tvshow.Season2} onChange={handleChange} />
-
                             <p className="has-text-white">Season 3</p>
                             <input className="input is-rounded" type="text" name="Season3" placeholder="Season 3" value={tvshow.Season3} onChange={handleChange} />
-
                             <p className="has-text-white">Season 4</p>
                             <input className="input is-rounded" type="text" name="Season4" placeholder="Season 4" value={tvshow.Season4} onChange={handleChange} />
-
                             <p className="has-text-white">Season 5</p>
                             <input className="input is-rounded" type="text" name="Season5" placeholder="Season 5" value={tvshow.Season5} onChange={handleChange} />
-
                             <p className="has-text-white">Season 6</p>
                             <input className="input is-rounded" type="text" name="Season6" placeholder="Season 6" value={tvshow.Season6} onChange={handleChange} />
-
                             <p className="has-text-white">Season 7</p>
                             <input className="input is-rounded" type="text" name="Season7" placeholder="Season 7" value={tvshow.Season7} onChange={handleChange} />
                             <p className="has-text-white">Season 8</p>
@@ -147,37 +154,20 @@ export default function ShowAdmin() {
                             <input className="input is-rounded" type="text" name="Season10" placeholder="Season 10" value={tvshow.Season10} onChange={handleChange} />
                             <p className="has-text-white">Season 11</p>
                             <input className="input is-rounded" type="text" name="Season11" placeholder="Season 11" value={tvshow.Season11} onChange={handleChange} />
+                            <p className="has-text-white">Show Name</p>
+                            <input className="input is-rounded" type="text" name="ShowName" placeholder="TV Show Name" value={tvshow.ShowName} onChange={handleChange} />
 
 
 
-                            <p className="has-text-white">Actors</p>
-                            <textarea className="textarea is-rounded" name="Actors" placeholder="Actors" value={tvshow.Actors} onChange={handleChange} />
+                            
 
-
-                            <p className="has-text-white">Age Rating</p>
-                            <input className="input is-rounded" type="text" name="AgeRating" placeholder="Age Rating" value={tvshow.AgeRating} onChange={handleChange} />
-
-                            <p className="has-text-white">Directed by</p>
-                            <textarea className="textarea is-rounded" name="DirectedBy" placeholder="Directed By" value={tvshow.DirectedBy} onChange={handleChange} />
-
-                            <p className="has-text-white">Episode Duration</p>
-                            <input className="input is-rounded" type="text" name="EpisodeDuration" placeholder="Episode Duration" value={tvshow.EpisodeDuration} onChange={handleChange} />
-
-                            <p className="has-text-white">Image</p>
-                            <input className="input is-rounded" type="text" name="Image" placeholder="Image" value={tvshow.Image} onChange={handleChange} />
-
-                            <p className="has-text-white">Language</p>
-                            <input className="input is-rounded" type="text" name="Language" placeholder="Language" value={tvshow.Language} onChange={handleChange} />
-
-                            <p className="has-text-white">Network</p>
-                            <input className="input is-rounded" type="text" name="Network" placeholder="Network" value={tvshow.Network} onChange={handleChange} />
-
-                            <p className="has-text-white">Nr. of Seasons</p>
-                            <input className="input is-rounded" type="text" name="NrOfSeasons" placeholder="Nr. of Seasons" value={tvshow.NrOfSeasons} onChange={handleChange} />
-
-                            <p className="has-text-white">Produced By</p>
-                            <textarea className="textarea is-rounded" name="ProducedBy" placeholder="Produced By" value={tvshow.ProducedBy} onChange={handleChange} />
-
+                            
+                            
+                            
+                            
+                           
+                            
+                            
 
 
 
