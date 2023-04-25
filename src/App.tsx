@@ -19,6 +19,7 @@ import '@aws-amplify/ui-react/styles.css';
 import { ID } from '@aws-amplify/datastore/lib-esm/util';
 import Listings from './components/Listings';
 import Feedback from './components/Feedback';
+import UpdateShow from './components/UpdateShow';
 
 
   
@@ -186,6 +187,7 @@ function App() {
           <Route path='/Movies' element={<Movies/>} />
           <Route path='/Listings' element={<Listings/>} />
           <Route path='/ShowAdmin' element={<ShowAdmin/>}></Route>
+          <Route path='/UpdateShow/:id' element={<UpdateShow/>}></Route>
           <Route path='/Feedback' element={<Feedback/>}/>
           <Route path='/:id' element={<Tvshow/>}></Route>
           

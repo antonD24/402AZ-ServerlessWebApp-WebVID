@@ -1,7 +1,3 @@
-
-
-
-
 let TVtypes: Array<Itv>;
 export default interface Itv{
     id: string,
@@ -17,6 +13,8 @@ export default interface Itv{
     ProducedBy: string,
     ReleaseDate: any,
     Season1 : string,
+    Season10 : string,
+    Season11 : string,
     Season2 : string,
     Season3 : string,
     Season4 : string,
@@ -25,11 +23,5 @@ export default interface Itv{
     Season7 : string,
     Season8 : string,
     Season9 : string,
-    Season10 : string,
-    Season11 : string,
     ShowName: string
-
-
-
-     
 };

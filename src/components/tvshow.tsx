@@ -119,7 +119,7 @@ export default function Tvshow() {
                             </div>
                             <h1 className="has-text-dark">a</h1>
                             <div className="box has-background-black">
-                                <iframe width="560" height="315" src={'https://www.youtube.com/embed/' + id} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
+                                <iframe width="560" height="315" src={`https://www.youtube.com/embed/${tvshow.id}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
 
                             </div>
 

@@ -9,7 +9,7 @@ import Tvshow from "./Tvshow";
 
 
 
-export default function ShowAdmin() {
+export default function UpdateShow() {
 
     const { id } = useParams();
 
@@ -41,18 +41,7 @@ export default function ShowAdmin() {
         ShowName: ""
     });
 
-    const getTVShows = () => {
-        ShowsServices.getAll()
-            .then((response: any) => {
-                setTVShows(response.data);
-                console.log(response.data);
-            })
-
-            .catch((e: Error) => {
-                console.log(e)
-
-            });
-    };
+    
 
     const handleChange = (event: any) => {
         setTVShow({ ...tvshow, [event.target.name]: event.target.value });
@@ -67,7 +56,7 @@ export default function ShowAdmin() {
         ShowsServices.put(savedTVShow)
             .then((response: any) => {
                 alert(response.data);
-                getTVShows();
+                getTVShow(id);
             })
             .catch((e: Error) => {
                 alert(e);
@@ -80,23 +69,7 @@ export default function ShowAdmin() {
         setTVShow(intvshow);
     };
 
-    const deleteTVShow = (id: string) => {
-        console.log(id)
-        ShowsServices.remove(id)
-            .then((response: any) => {
-                alert(response.data)
-                getTVShows();
-            })
-            .catch((e: Error) => {
-                alert(e);
-                console.log(e);
-            })
-
-    }
-
-    useEffect(() => {
-        getTVShows();
-    }, [])
+    
 
     
     const getTVShow = (id: string) => {
@@ -121,69 +94,40 @@ export default function ShowAdmin() {
     
 
     return (
-        <div className="has-background-success-dark">
+       
+       <div className="has-background-success-dark">
             
-                <section className="box has-background-black has-text-centered pt-6">
-                    <h1 className="title is-1 has-text-white">Manage Shows</h1>
+                <div className="box has-background-black has-text-centered pt-6">
+                    <h1 className="title is-1 has-text-white">Update Show</h1>
                     <h2 className=""></h2>
-                </section>
+                </div>
+                
                 <div className="columns is-multiline">
-                    
-                <div className="column is-half pl-6 mt-6 pt-6 pb-6">
-                    
-                <div className="box has-background-dark">
-                <h4 className="has-text-centered title is-1 has-text-white">Current Shows</h4>
-                    <div className="section">
-                        <div className="columns is-multiline">
-                            {
-                                TVShows.map((tvshow, index) => (
+                
+                <div className="column is-half pl-6 pt-6 mt-6">
+                    <div className="box has-background-dark">
+                    <a href={`/ShowAdmin`} target="_blank" rel="noopener noreferrer" className="button is-medium has-text-white has-background-warning-dark is-warning is-rounded  mb-3 ml-5">Back to main Admin Page</a>
+                        <h1 className="has-text-white has-text-centered title is-1">{tvshow.ShowName}</h1>
 
+                            <figure className="image">
+                                <img src={tvshow.Image} />
+                            </figure>
 
-                                    <div className="column is-half has-background-backgrounddark">
+                            <div className="">
+                                
+                                <div className="">
+                                    
 
-                                        <div className="card has-background-black">
-                                            <div className="card-image">
-                                                <figure className="image">
-                                                    <img src={tvshow.Image}></img>
-                                                </figure>
-                                            </div>
-                                            <div className="has-text-centered mt-4">
-                                                <h3 className="has-text-white mb-5">ID:  {tvshow.id}</h3>
-                                            </div>
-                                            
-
-                                                <div className="has-text-centered mt-3">
-                                                    <a href={tvshow.id} target="_blank" rel="noopener noreferrer" className="button is-rounded is-link mb-3">View Show</a>
-                                                    <a href={`UpdateShow/${tvshow.id}`} target="_blank" rel="noopener noreferrer" className="button is-rounded is-warning mb-3 ml-5">Update</a>
-                                                    <p>
-                                                    <button className="button is-rounded is-danger is-fullwidth mt-3 mb-3" onClick={() => { deleteTVShow(tvshow.id) }}>DELETE</button>
-                                                    </p>
-
-                                                </div>
-
-                                                
-                                                
-                                            
-
-                                        </div>
-
-
-
-                                    </div>
-
-                                ))
-                            }
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-                    
-                    <div className="column is-half mt-6 pr-6 pt-6 pb-6">
-                <div className="box has-background-dark">
+                                </div>
+                                </div>
+                                </div>
+                                </div>
+                <div className="column is-half pr-6 pb-6 pt-6 mt-6">
+                <section className="box has-background-dark">
 
                     <div className="content">
                         <form>
-                            <h1 className="has-text-centered title is-1" ><strong className="has-text-white">Add a show</strong></h1>
+                            <h1 className="has-text-centered" ><strong className="has-text-white">Update info</strong></h1>
                             <p className="has-text-white">TV Show ID</p>
                             <input className="input is-rounded" type="text" name="id" placeholder="Show ID" value={tvshow.id} onChange={handleChange} />
                             <p className="has-text-white">Actors</p>
@@ -252,17 +196,17 @@ export default function ShowAdmin() {
                         </form>
                         <h1 className="title-1"></h1>
                         <div className="has-text-centered">
-                            <button className="button is-large is-rounded is-info" onClick={() => { saveTVShow() }}> Add Show</button>
+                            <button className="button is-large is-fullwidth is-rounded is-info" onClick={() => { saveTVShow() }}>Update</button>
                         </div>
                     </div>
-                    </div>
-                    </div>
+
 
                     
 
+                </section >
                 </div>
-            
-        </div>
+            </div >
+            </div>
     )
 
 
