@@ -1,5 +1,9 @@
 import React from "react";
 
+// this is the Feedback page, providing users with a way to leave their imppressions of the service 
+// for other users to see, as well as the creators
+
+
 export default function Feedback() {
     return(
         <div className = "container is-fluid has-background-black">
@@ -17,3 +21,5 @@ export default function Feedback() {
         </div>
     )
 }
+
+// this page is meant to be created by a member of the development team

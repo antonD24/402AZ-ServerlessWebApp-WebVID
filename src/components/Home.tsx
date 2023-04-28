@@ -1,5 +1,9 @@
 import React from "react";
 
+
+// this is the home page, this page provides a short presetnation and description of the service 
+
+
 export default function Home() {
     return (
         <div className="has-background-black">
