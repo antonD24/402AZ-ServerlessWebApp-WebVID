@@ -91,7 +91,12 @@ export default function UpdateShow() {
         }
     }, [id])
     
-    
+    // the useEffect hook tells the React app that it needs to use the getTVShow function after rendering the page
+    // this triggers the communication with the API and retreives the item in the database that matches the id
+    // after it populates all the fields in the form acording to the retreived data 
+    // after editing the information and clicking the update button the data is updated in the database 
+ 
+
 
     return (
        

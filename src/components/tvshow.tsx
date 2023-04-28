@@ -61,8 +61,13 @@ export default function Tvshow() {
         }
     }, [id])
 
+    // the useEffect hook tells the React app that it needs to use the getTVShow function after rendering the page
+    // this triggers the communication with the API and retreives the item in the database that matches the id it first received from the 
+    // main shows page and as a result the app gets all the information assigned to that item and is available for use to render all the required elements.
 
-    //tabs
+    // This is the tabs component of the page which allows season selection
+    // using event listeners, after clicking a certain tab the code hides the content that is actively displayed 
+    // by using id's for each tab the app knows which tab to switch to being active and what tab needs to be hidden along with it's contents
     const tabs = document.querySelectorAll('.tabs li');
     const tabContentBoxes = document.querySelectorAll('#tab-content > div');
 
@@ -119,8 +124,12 @@ export default function Tvshow() {
                             </div>
                             <h1 className="has-text-dark">a</h1>
                             <div className="box has-background-black">
-                                <iframe width="560" height="315" src={`https://www.youtube.com/embed/${tvshow.id}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
-
+                                <iframe width="560" height="315" src={`https://www.youtube.com/embed/${tvshow.id}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"></iframe>
+                                {
+                                    //The code above is the pre-built youtube code that allow embeding youtube videos on other websites 
+                                    // since we are using the video id's for the show id's in the databse
+                                    // it has been modified to use the id of each show to load the trailer of the show 
+                                }
                             </div>
 
 
@@ -130,7 +139,12 @@ export default function Tvshow() {
 
                         </div>
 
-
+                            {
+                                // in the code below we can see all the types of the tv show being mapped to individual boxes 
+                                // that display the infromation in a separate manner which improves readability and design
+                                // and because all of it is assigned to one show id, when the website renders the page it dynamically assigns the 
+                                // appropriate information to the elements
+                            }
 
                         <div className="column is-half">
 
@@ -178,6 +192,12 @@ export default function Tvshow() {
 
                     </div>
                 </div>
+                
+                            {
+                                // this is the prebult tab structure that the Bulma CSS framework offers 
+                                // this element is used to provide easy switching between seasons 
+                            }
+
                 <div className="section has-background-gray">
                     <div className="tabs is-medium is-centered has-background-black">
                         <ul>
@@ -217,6 +237,10 @@ export default function Tvshow() {
 
                             </a>
 
+                                {
+                                    //The code above is the pre-built youtube code that allow embeding youtube videos on other websites 
+                                    // it has been modified to use the data in the season data type which contains the video id from youtube
+                                }
 
                         </div>
                         <div id="Season-2" className="is-hidden">

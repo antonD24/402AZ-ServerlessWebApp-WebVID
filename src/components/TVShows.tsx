@@ -27,15 +27,19 @@ export default function TVShows() {
     getTVShow();
   }, []);
 
+  // the useEffect hook tells the React app that it needs to use the getTVShows function after rendering the page
+  // this triggers the communication with the API and retreives all items in the databse and renders it at specified in the code bellow
+
+
   return (
-    
+
     <div className="has-background-black">
-      
+
       <h1 className="title is-1 has-text-white has-text-centered pt-6">TV Shows</h1>
       <MyApp></MyApp>
       <div className="container has-text-centered has-background-dark">
         <div className="">
-          
+
           <h2 className=""></h2>
 
         </div>
@@ -45,6 +49,17 @@ export default function TVShows() {
           <div className="columns is-multiline">
             {
               TVShows.map((tvshow, index) => (
+
+                // the .map is used for displaying a list of similar objects of a component
+                // this function can be called on an array and a new object is rendered for each item available in the database
+                // by using this function we can map each element of an array to a component
+                // EX: images, text and id's in the database 
+                // by doing this we have a granular control over the elements that are displayed and they can be manipulated
+                // in any way EX: displaying images and name in cards and asssigning to open the page of the tv show by clicking the 
+                // watch or view button, since it is assigned to the shows id
+                // the update button on each card, opens a new page using the show id for viewing and accesing the information about the show 
+                // that is assigned to that id
+
                 <div className="column is-one-third has-background-backgrounddark">
 
 
@@ -72,14 +87,14 @@ export default function TVShows() {
                       <a href={tvshow.id} className="button has-background-success-dark is-success is-fullwidth is-rounded">Watch</a>
 
 
-                      
+
 
 
 
 
 
                     </footer>
-                    
+
                   </div>
                 </div>
               ))

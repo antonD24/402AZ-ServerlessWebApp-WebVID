@@ -2,7 +2,9 @@ import React from 'react';
 import {Auth} from 'aws-amplify';
 
 
-
+// this is the NAVBAR of the application, this is a reacurring component that is part of the navigation & page layout and is displayed on each page
+// providing an easy way to switch between pages, as well as logging out of the service
+// each button is assigned to a specific page, and the log out button triggers the logout function.
 
 
 export default function NavBar(){

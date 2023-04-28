@@ -1,4 +1,8 @@
 let TVtypes: Array<Itv>;
+
+// these are the data types of the database, each of the is used to retreive the correcct information and then used through the map function
+// to display the information inside the app
+
 export default interface Itv{
     id: string,
     Actors: string,
