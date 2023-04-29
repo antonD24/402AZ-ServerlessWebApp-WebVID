@@ -67,7 +67,7 @@ export default function TVShows() {
 
                   <div className="card">
                     <div className="card-image">
-                      <figure className="image">
+                      <figure className="image is-3by4">
                         <img src={tvshow.Image} alt="Placeholder image" />
                       </figure>
                     </div>
