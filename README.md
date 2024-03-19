@@ -5,6 +5,8 @@ Admins should be able to add new shows in a separate window, along with pictures
 
 This was a university project in my first year as part of our second software dev and web development module of the year (Serverless Web Applications).
 
+This was a group assignment (The Feedback, Movies and Listing pages will be eampty as they were the contribution of my colleagues. Everything else was done by me.)
+
 In this module we have studied the modern approach of serverless applications and REST APIs, as well as NoSQL Document Databases.
 
 The front-end was developed as a dynamic web app using React with TypeScript and CSS libraries.
