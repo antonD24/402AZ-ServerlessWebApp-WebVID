@@ -3,7 +3,7 @@
 Create a web application for finding TV Shows, Read information and Descriptions,Reading Comments.
 Admins should be able to add new shows in a separate window, along with pictures and embed trailers for each seasson.
 
-This was a university project in my first year as part of our second software dev module of the year (Serverless Web Applications).
+This was a university project in my first year as part of our second software dev and web development module of the year (Serverless Web Applications).
 
 In this module we have studied the modern approach of serverless applications and REST APIs, as well as NoSQL Document Databases.
 
@@ -20,6 +20,8 @@ For sign-in and registering the whole website is secured behind AWS Cognito whic
 Login UI for Cognito was used from the Amplify library.
 
 API Gateway, Lambda Functions and DynamoDB being the serverless components of the app infrastructure.
+
+DISCLAIMER: Security was not the focus of the module, further immplementations could have been done, such as credential rotation.
 
 ## Additional Info
 
