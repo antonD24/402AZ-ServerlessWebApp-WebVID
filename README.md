@@ -4,13 +4,21 @@ Create a web application for finding TV Shows, Read information and Descriptions
 Admins should be able to add new shows in a separate window, along with pictures and embed trailers for each seasson.
 
 This was a university project in my first year as part of our second software dev module of the year (Serverless Web Applications).
+
 In this module we have studied the modern approach of serverless applications and REST APIs, as well as NoSQL Document Databases.
+
 The front-end was developed as a dynamic web app using React with TypeScript and CSS libraries.
+
 The database connection was achieved using a REST API created in AWS API Gateway.
+
 The CRUD operations between the API and the DynamoDB database were done through AWS Lambda Functions.
+
 Assets such as images are stored in S3 buckets.
+
 For sign-in and registering the whole website is secured behind AWS Cognito which provides account management, e-mail registration verfication, etc.
+
 Login UI for Cognito was used from the Amplify library.
+
 API Gateway, Lambda Functions and DynamoDB being the serverless components of the app infrastructure.
 
 ## Additional Info
