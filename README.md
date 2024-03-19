@@ -1,4 +1,17 @@
-# Getting Started with Create React App
+# Project Description
+
+This was a university project in my first year as part of our second software dev module of the year (Serverless Web Applications).
+In this module we have studied the modern approach of serverless applications and REST APIs, as well as NoSQL Document Databases.
+The front-end was developed as a dynamic web app using React with TypeScript and CSS libraries.
+The database connection was achieved using a REST API created in AWS API Gateway.
+The CRUD operations between the API and the DynamoDB database were done through AWS Lambda Functions.
+API Gateway, Lambda Functions and DynamoDB being the serverless components of the app infrastructure.
+
+## Additional Info
+
+In addition to the developed appication, prototypes were developed in Figma, UML & Workflow diagrams as well as Personas for the Acceptance Criteria.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
